@@ -69,10 +69,10 @@ statues = [
   {x:-11594,y:  600, z:-10016,map:         "Fire Sanctuary", name:"     Thirsty Frog Room"},
   {x:    0, y: -550, z:-14250,map:         "Fire Sanctuary", name:             "Boss Door"},//Boss Door
   //Lanayru Desert
-  {x: 1680, y: 1984, z:18933, map:         "Lanayru Desert", name:"?"},
+  {x: 1680, y: 1984, z:18933, map:         "Lanayru Desert", name:""},
   {x:-2117, y:  475, z:-6749, map:         "Lanayru Desert", name:          "North Desert"},
-  {x:-23334,y:   50, z:  749, map:         "Lanayru Desert", name:"?"},
-  {x:-34352,y:   50, z:-4031, map:         "Lanayru Desert", name:"?"},
+  {x:-23334,y:   50, z:  749, map:         "Lanayru Desert", name:         "Lanayru Gorge"},
+  {x:-34352,y:   50, z:-4031, map:         "Lanayru Desert", name:        "Temple of Time"},
   {x:-14960,y:   80, z: 8300, map:         "Lanayru Desert", name:"?"},
   {x: 9300, y:  226, z:10200, map:         "Lanayru Desert", name:"?"},
   {x:-2054, y:  475, z:-6773, map:         "Lanayru Desert", name:"North Desert Alternate"},
