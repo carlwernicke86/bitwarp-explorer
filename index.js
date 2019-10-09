@@ -20,6 +20,15 @@ window.onload = function() {
     imageBufferInUse *= -1;
   }
 
+  function DisplayTooltip(d, thisCircle) {
+    let info = "x: "+d.x+" y: "+d.y+" z: "+d.z+"\n"+d.map+": "+d.name;
+    console.log(info);
+    let tooltip = document.createElement("span");
+    tooltip.className = "tooltip";
+    tooltip.innerHTML = info;
+    thisCircle.append(tooltip);
+  }
+
   let wholeSVG = d3.select("#generalMap").append("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
 
   wholeSVG.append("image").attr("width",IMAGE_WIDTH)
@@ -39,14 +48,13 @@ window.onload = function() {
   let statue_scatter = wholeSVG.selectAll("circle")
                        .data(statues)
                        .enter()
-                       .append("circle");
+                       .append("circle")
 
   statue_scatter.attr("r", 4)
                 .attr("fill", "#f5ff5f")
                 .attr("stroke", "#865c7c")
                 .attr("stroke-width", 2)
-                .on("mouseover", function(d){console.log("x: "+d.x+" y: "+d.y+" z: "+d.z+
-                                                         "\n"+d.map+": "+d.name)});
+                .on("mouseover", function(d) {DisplayTooltip(d, this);});
 
   //buttons
   let selectorList = [
