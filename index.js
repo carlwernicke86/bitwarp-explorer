@@ -100,6 +100,11 @@ window.onload = function() {
       name: "Fire Sanctuary",
       text: "Fire Sanctuary",
       index: 6
+    },
+    {
+      name: "Lake Floria",
+      text: "Lake Floria",
+      index: 7
     }
   ];
 

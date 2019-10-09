@@ -96,9 +96,9 @@ statues = [
   {x: -1200,y:   30, z:-2000, map:          "Lanayru Gorge", name:"              Entrance"},
   //Lanayru Mining Facility
   {x: -900, y:    0, z: 2200, map:"Lanayru Mining Facility", name:"              Entrance"},
-  {x:-3475, y: 1100, z:-20750,map:"Lanayru Mining Facility", name:"?"},
+  {x:-3475, y: 1100, z:-20750,map:"Lanayru Mining Facility", name:"        Boss Door East"},
   {x: -700, y:  600, z:-8860, map:"Lanayru Mining Facility", name:"?"},
-  {x: 4125, y: 1100, z:-22800,map:"Lanayru Mining Facility", name:"             Boss Door"},
+  {x: 4125, y: 1100, z:-22800,map:"Lanayru Mining Facility", name:"        Boss Door West"},
   //Sandship
   {x:-4993, y:    0, z:  811, map:               "Sandship", name:"            First Lock"},
   {x:-2766, y:-1600, z: 1830, map:               "Sandship", name:"             Boss Door"}, //Boss Door

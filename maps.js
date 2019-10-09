@@ -22,5 +22,7 @@ maps = [
   //Deep Woods
   {name:"                      Deep Woods", url:"  maps/F101.png",minX:-32150,maxX:31900,minZ:-12150,maxZ:23900, index: 5},
   //Fire Sanctuary
-  {name:"                  Fire Sanctuary", url:"  maps/D201.png",minX:-35150,maxX:32700,minZ:-27050,maxZ:11050, index: 6}
+  {name:"                  Fire Sanctuary", url:"  maps/D201.png",minX:-35150,maxX:32700,minZ:-27050,maxZ:11050, index: 6},
+  //Lake Floria
+  {name:"                     Lake Floria", url:"  maps/F102.png",minX:-38800,maxX:38800,minZ:-14750,maxZ:29000, index: 7}
 ];
