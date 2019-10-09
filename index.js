@@ -7,11 +7,6 @@ window.onload = function() {
 
   var imageBufferInUse = 1;
 
-  window.onresize = function() {
-    IMAGE_WIDTH = window.innerWidth * 0.79;
-    d3.selectAll("image").attr("width", IMAGE_WIDTH);
-  }
-
   function ChangeToMap(i) {
     cm = maps[i];
     cxScale = d3.scaleLinear().domain([cm.minX,cm.maxX]).range([0,IMAGE_WIDTH]);
@@ -34,6 +29,11 @@ window.onload = function() {
   function mouseOffStatue(d, circleObject) {
     d3.select("#infoDisplay").text("");
     circleObject.style.fill="#f5ff5f";
+  }
+
+  window.onresize = function() {
+    IMAGE_WIDTH = window.innerWidth * 0.79;
+    d3.selectAll("image").attr("width", IMAGE_WIDTH);
   }
 
   let wholeSVG = d3.select("#generalMap").append("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
@@ -76,6 +76,31 @@ window.onload = function() {
       text: "Inside the Statue of the Goddess",
       index: 1
     },
+    {
+      name: "Lanayru Mine",
+      text: "Lanayru Mine",
+      index: 2
+    },
+    {
+      name: "Lanayru Desert",
+      text: "Lanayru Desert",
+      index: 3
+    },
+    {
+      name: "Skyview Temple",
+      text: "Skyview Temple",
+      index: 4
+    },
+    {
+      name: "Deep Woods",
+      text: "Deep Woods",
+      index: 5
+    },
+    {
+      name: "Fire Sanctuary",
+      text: "Fire Sanctuary",
+      index: 6
+    }
   ];
 
   //set selection event for drop-down list
