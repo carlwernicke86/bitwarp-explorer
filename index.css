@@ -7,26 +7,28 @@ option, select{
   background-color: purple;
 }
 
-#generalMap {
-  display: inline;
-  border-color: yellow;
-  border-width: 5px;
-}
-
 image {
   border-color: yellow;
   border-width: 15px;
   border-style: solid;
 }
 
-.tooltip {
-  width: 120px;
-  background-color: black;
-  color: #fff;
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#generalMap {
+  width: 80%;
+}
+
+#controls {
+  width: 20%;
+}
+
+#infoDisplay {
+  color: white;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  visibility: visible;
+  height: 200px;
 }

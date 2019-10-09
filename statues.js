@@ -33,7 +33,7 @@ statues = [
   {x:-4950, y:  249, z:-5700, map:            "Lake Floria", name:      "Floria Waterfall"}, //Floria Waterfall
   //Skyview Temple
   {x:  268, y: 1124, z: 6180, map:         "Skyview Temple", name:              "Entrance"}, //Entrance
-  {x:  680, y:    0, z: 1560, map:         "Skyview Temple", name:                     "?"},
+  {x:  680, y:    0, z: 1560, map:         "Skyview Temple", name:        "Map Chest Room"},
   {x:-3500, y:    0, z:-8400, map:         "Skyview Temple", name:         "Main Hub Room"}, //Main Hub Room
   {x: 1027, y:  300, z:-16994,map:         "Skyview Temple", name:             "Boss Door"},//Boss Door
   //Ancient Cistern
@@ -43,7 +43,7 @@ statues = [
   {x:-12300,y: 1481, z: 1370, map:        "Ancient Cistern", name:                     "?"},
   {x:-5263, y:-3410, z: 4381, map:        "Ancient Cistern", name:                     "?"},
   {x:-3459, y:-4218, z:  887, map:        "Ancient Cistern", name:                     "?"},
-  {x:  444, y: 1000, z:-5435, map:        "Ancient Cistern", name:                     "?"},
+  {x:  444, y: 1000, z:-5435, map:        "Ancient Cistern", name:   "Lilypad Geyser Room"},
   //Eldin Volcano
   {x:-9900, y: 1840, z: 2800, map:          "Eldin Volcano", name:              "Entrance"},
   {x: 3470, y:  987, z: 6420, map:          "Eldin Volcano", name:          "Volcano East"}, //
@@ -62,17 +62,17 @@ statues = [
   {x:-9600, y: 6050, z:-13840,map:           "Earth Temple", name:             "Boss Door"},//Boss Door
   //Fire Sanctuary
   {x: 1282, y: 1100, z: 5974, map:         "Fire Sanctuary", name:              "Entrance"},
-  {x: 4050, y:    0, z:-5132, map:         "Fire Sanctuary", name:"?"},
-  {x:-7008, y:    0, z:-15921,map:         "Fire Sanctuary", name:"?"},
-  {x:-7581, y: -550, z:-11476,map:         "Fire Sanctuary", name:"?"},
-  {x: -222, y: 1100, z: -1072,map:         "Fire Sanctuary", name:"?"},
-  {x:-11594,y:  600, z:-10016,map:         "Fire Sanctuary", name:"?"},
+  {x: 4050, y:    0, z:-5132, map:         "Fire Sanctuary", name:"   First Magmanos Room"},
+  {x:-7008, y:    0, z:-15921,map:         "Fire Sanctuary", name:" Northwest Circle Room"},
+  {x:-7581, y: -550, z:-11476,map:         "Fire Sanctuary", name:"      Mogma Mitts Room"},
+  {x: -222, y: 1100, z: -1072,map:         "Fire Sanctuary", name:"Initial Outdoor Bridge"},
+  {x:-11594,y:  600, z:-10016,map:         "Fire Sanctuary", name:"     Thirsty Frog Room"},
   {x:    0, y: -550, z:-14250,map:         "Fire Sanctuary", name:             "Boss Door"},//Boss Door
   //Lanayru Desert
-  {x: 1680, y: 1984, z:18933, map:         "Lanayru Desert", name:"?"},
+  {x: 1680, y: 1984, z:18933, map:         "Lanayru Desert", name:""},
   {x:-2117, y:  475, z:-6749, map:         "Lanayru Desert", name:          "North Desert"},
-  {x:-23334,y:   50, z:  749, map:         "Lanayru Desert", name:"?"},
-  {x:-34352,y:   50, z:-4031, map:         "Lanayru Desert", name:"?"},
+  {x:-23334,y:   50, z:  749, map:         "Lanayru Desert", name:         "Lanayru Gorge"},
+  {x:-34352,y:   50, z:-4031, map:         "Lanayru Desert", name:        "Temple of Time"},
   {x:-14960,y:   80, z: 8300, map:         "Lanayru Desert", name:"?"},
   {x: 9300, y:  226, z:10200, map:         "Lanayru Desert", name:"?"},
   {x:-2054, y:  475, z:-6773, map:         "Lanayru Desert", name:"North Desert Alternate"},
