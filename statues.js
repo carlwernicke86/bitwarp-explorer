@@ -103,9 +103,9 @@ statues = [
   {x:-2766, y:-1600, z: 1830, map:               "Sandship", name:"Boss Door"}, //Boss Door
   {x: 4818, y:    0, z: -730, map:               "Sandship", name:"Captain's Cabin"},
   //Sealed Grounds
-  {x:-11029,y: 7500, z: 6279, map:         "Sealed Grounds", name:"?"},
-  {x: 1365, y: 7600, z:10420, map:         "Sealed Grounds", name:"?"},
-  {x:-8043, y: 8403, z:  153, map:         "Sealed Grounds", name:"?"},
+  {x:-11029,y: 7500, z: 6279, map:         "Sealed Grounds", name:"Sealed Temple"},
+  {x: 1365, y: 7600, z:10420, map:         "Sealed Grounds", name:"Behind the Temple"},
+  {x:-8043, y: 8403, z:  153, map:         "Sealed Grounds", name:"Entrance"},
   //Past Sealed Grounds
   {x:    0, y:    0, z: 2320, map:    "Past Sealed Grounds", name:"Demise"},
 ]

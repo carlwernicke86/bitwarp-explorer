@@ -27,7 +27,7 @@ window.onload = function() {
   }
 
   function mouseOverStatue(d, circleObject) {
-    circleObject.style.fill = "red";
+    circleObject.style.fill = "blue";
     d3.select("#infoDisplay").text("x: "+d.x+" y: "+d.y+" z: "+d.z+";  "+d.map+": "+d.name);
   }
 
