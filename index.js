@@ -1,28 +1,24 @@
 window.onload = function() {
 
-  let   IMAGE_WIDTH = window.innerWidth * 0.79;
-  const IMAGE_RATIO = 1016/1860;
-  const IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
-  const TRANSITION_DURATION = 1000;
+  let IMAGE_WIDTH = window.innerWidth * 0.79;
+  let IMAGE_RATIO = 1016/1860;
+  let IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
+  let DEFAULT_TRANSITION_DURATION = 1000;
 
   var imageBufferInUse = 1;
+  var curMap = 0;
 
-  window.onresize = function() {
-    IMAGE_WIDTH = window.innerWidth * 0.79;
-    d3.selectAll("image").attr("width", IMAGE_WIDTH);
-  }
-
-  function ChangeToMap(i) {
-    cm = maps[i];
-    cxScale = d3.scaleLinear().domain([cm.minX,cm.maxX]).range([0,IMAGE_WIDTH]);
-    cyScale = d3.scaleLinear().domain([cm.minZ,cm.maxZ]).range([0,IMAGE_HEIGHT]);
-    statue_scatter.transition().duration(TRANSITION_DURATION).attr("cx", function(d){return cxScale(d.x);})
+  function ChangeToMap(mapIndex) {
+    curMap = maps[mapIndex];
+    cxScale = d3.scaleLinear().domain([curMap.minX,curMap.maxX]).range([0,IMAGE_WIDTH]);
+    cyScale = d3.scaleLinear().domain([curMap.minZ,curMap.maxZ]).range([0,IMAGE_HEIGHT]);
+    statue_scatter.transition().duration(DEFAULT_TRANSITION_DURATION).attr("cx", function(d){return cxScale(d.x);})
                                                              .attr("cy", function(d){return cyScale(d.z);});
 
     //switch buffers and transition
-    d3.select("svg #i"+imageBufferInUse).transition().duration(TRANSITION_DURATION).style("opacity",0);
-    d3.select("svg #i"+(imageBufferInUse*-1)).attr("xlink:href", cm.url).style("opacity",0);
-    d3.select("svg #i"+(imageBufferInUse*-1)).transition().duration(TRANSITION_DURATION).style("opacity",1);
+    d3.select("svg #i"+imageBufferInUse).transition().duration(DEFAULT_TRANSITION_DURATION).style("opacity",0);
+    d3.select("svg #i"+(imageBufferInUse*-1)).attr("xlink:href", curMap.url).style("opacity",0);
+    d3.select("svg #i"+(imageBufferInUse*-1)).transition().duration(DEFAULT_TRANSITION_DURATION).style("opacity",1);
     imageBufferInUse *= -1;
   }
 
@@ -34,6 +30,19 @@ window.onload = function() {
   function mouseOffStatue(d, circleObject) {
     d3.select("#infoDisplay").text("");
     circleObject.style.fill="#f5ff5f";
+  }
+
+  window.onresize = function() {
+    //reset components on a window resize
+    IMAGE_WIDTH  = window.innerWidth * 0.79;
+    IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
+    d3.selectAll("image").attr("width", IMAGE_WIDTH).attr("height", IMAGE_HEIGHT);
+    d3.select("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
+
+    cxScale = d3.scaleLinear().domain([curMap.minX,curMap.maxX]).range([0,IMAGE_WIDTH]);
+    cyScale = d3.scaleLinear().domain([curMap.minZ,curMap.maxZ]).range([0,IMAGE_HEIGHT]);
+    statue_scatter.transition().duration(0).attr("cx", function(d){return cxScale(d.x);})
+                                                             .attr("cy", function(d){return cyScale(d.z);});
   }
 
   let wholeSVG = d3.select("#generalMap").append("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
@@ -55,7 +64,7 @@ window.onload = function() {
   let statue_scatter = wholeSVG.selectAll("circle")
                        .data(statues)
                        .enter()
-                       .append("circle");
+                       .append("circle")
 
   statue_scatter.attr("r", 4)
                 .attr("fill", "#f5ff5f")
@@ -76,6 +85,36 @@ window.onload = function() {
       text: "Inside the Statue of the Goddess",
       index: 1
     },
+    {
+      name: "Lanayru Mine",
+      text: "Lanayru Mine",
+      index: 2
+    },
+    {
+      name: "Lanayru Desert",
+      text: "Lanayru Desert",
+      index: 3
+    },
+    {
+      name: "Skyview Temple",
+      text: "Skyview Temple",
+      index: 4
+    },
+    {
+      name: "Deep Woods",
+      text: "Deep Woods",
+      index: 5
+    },
+    {
+      name: "Fire Sanctuary",
+      text: "Fire Sanctuary",
+      index: 6
+    },
+    {
+      name: "Lake Floria",
+      text: "Lake Floria",
+      index: 7
+    }
   ];
 
   //set selection event for drop-down list
@@ -91,5 +130,5 @@ window.onload = function() {
       .attr("value", function(d) {return d.index;})
       .text(function(d) {return d.text;})
 
-  ChangeToMap(0);
+  ChangeToMap(curMap);
 }
