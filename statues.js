@@ -3,7 +3,7 @@
 
 statues = [
   //Skyloft
-  {x:-4698, y: 1237, z:-6364, map:                "Skyloft", name:         "Lower Academy", bitwarp:  true},
+  {x:-4698, y: 1237, z:-6364, map:                "Skyloft", name:         "Lower Academy", bitwarp:  true}, //lower academy
   {x: 2186, y:  393, z:  804, map:                "Skyloft", name:                "Bazaar", bitwarp:  true}, //bazzar
   {x: 4174, y:-3157, z:-5928, map:                "Skyloft", name:        "Waterfall Cave", bitwarp:  true}, //waterfall cave
   {x:-2353, y: 1880, z:-9622, map:                "Skyloft", name:         "Upper Academy", bitwarp:  true}, //upper academy
@@ -79,12 +79,12 @@ statues = [
   {x:10175, y: 2293, z:35566, map:           "Lanayru Mine", name:"              Entrance", bitwarp: false},
   //Sand Sea Docks
   {x:  180, y:   70, z: -410, map:         "Sand Sea Docks", name:"        Sand Sea Docks", bitwarp: false},
-  //Sand Sea
-  {x:-48573,y:-10000,z:30736, map:               "Sand Sea", name:"?", bitwarp: false},
+  //Sand Sea, not displaying these since they will never be useful
+  /*{x:-48573,y:-10000,z:30736, map:               "Sand Sea", name:"?", bitwarp: false},
   {x:-123230,y:-10000,z:12391,map:               "Sand Sea", name:"?", bitwarp: false},
   {x:-121658,y:-10000,z:-34290,map:              "Sand Sea", name:"?", bitwarp: false},
   {x: 1786, y:-10000,z: -736, map:               "Sand Sea", name:"?", bitwarp: false},
-  {x:-120725,y:-10000,z:11223,map:               "Sand Sea", name:"?", bitwarp: false},
+  {x:-120725,y:-10000,z:11223,map:               "Sand Sea", name:"?", bitwarp: false},*/
   //Skipper's Retreat
   {x:-3945, y:   50, z: 8660, map:      "Skipper's Retreat", name:"              Entrance", bitwarp: false},
   //Shipyard
