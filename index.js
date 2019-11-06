@@ -124,6 +124,21 @@ window.onload = function() {
       name: "Ancient Cistern (basement)",
       text: "Ancient Cistern (Basement)",
       index: 9
+    },
+    {
+      name: "Faron Woods",
+      text: "Faron Woods",
+      index: 10
+    },
+    {
+      name: "Sealed Grounds",
+      text: "Sealed Grounds",
+      index: 11
+    },
+    {
+      name: "Eldin Volcano",
+      text: "Eldin Volcano",
+      index: 12
     }
   ];
 

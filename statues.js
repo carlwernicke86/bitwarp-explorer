@@ -78,7 +78,7 @@ statues = [
   //Sand Sea Docks
   {x:  180, y:   70, z: -410, map:         "Sand Sea Docks", name:"        Sand Sea Docks", bitwarp: false},
   //Sand Sea, not displaying these since they will never be useful
-  /*{x:-48573,y:-10000,z:30736, map:               "Sand Sea", name:"?", bitwarp: false},
+  /*{x:-48573,y:-10000,z:30736, map:             "Sand Sea", name:"?", bitwarp: false},
   {x:-123230,y:-10000,z:12391,map:               "Sand Sea", name:"?", bitwarp: false},
   {x:-121658,y:-10000,z:-34290,map:              "Sand Sea", name:"?", bitwarp: false},
   {x: 1786, y:-10000,z: -736, map:               "Sand Sea", name:"?", bitwarp: false},
