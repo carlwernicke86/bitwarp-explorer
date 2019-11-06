@@ -1,16 +1,22 @@
 body {
-  background-color: black;
+  background-image: url("triforce-bg.jpg");
 }
 
 option, select{
   color: yellow;
   background-color: purple;
+  height: 20px;
+  border-color: gold;
 }
 
-image {
-  border-color: yellow;
-  border-width: 15px;
+svg {
+  border-color: gold;
+  border-width: 1px;
   border-style: solid;
+}
+
+option, select, svg {
+    border-radius: 4px;
 }
 
 #container {
@@ -25,6 +31,8 @@ image {
 
 #controls {
   width: 20%;
+  display: flex;
+  justify-content: space-around;
 }
 
 #infoDisplay {

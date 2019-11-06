@@ -1,28 +1,29 @@
 window.onload = function() {
 
-  let   IMAGE_WIDTH = window.innerWidth * 0.79;
-  const IMAGE_RATIO = 1016/1860;
-  const IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
-  const TRANSITION_DURATION = 1000;
+  let IMAGE_WIDTH = window.innerWidth * 0.79;
+  let IMAGE_RATIO = 1016/1860;
+  let IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
+  let DEFAULT_TRANSITION_DURATION = 1000;
 
   var imageBufferInUse = 1;
+  var curMap = 0;
 
-  function ChangeToMap(i) {
-    cm = maps[i];
-    cxScale = d3.scaleLinear().domain([cm.minX,cm.maxX]).range([0,IMAGE_WIDTH]);
-    cyScale = d3.scaleLinear().domain([cm.minZ,cm.maxZ]).range([0,IMAGE_HEIGHT]);
-    statue_scatter.transition().duration(TRANSITION_DURATION).attr("cx", function(d){return cxScale(d.x);})
+  function ChangeToMap(mapIndex) {
+    curMap = maps[mapIndex];
+    cxScale = d3.scaleLinear().domain([curMap.minX,curMap.maxX]).range([0,IMAGE_WIDTH]);
+    cyScale = d3.scaleLinear().domain([curMap.minZ,curMap.maxZ]).range([0,IMAGE_HEIGHT]);
+    statue_scatter.transition().duration(DEFAULT_TRANSITION_DURATION).attr("cx", function(d){return cxScale(d.x);})
                                                              .attr("cy", function(d){return cyScale(d.z);});
 
     //switch buffers and transition
-    d3.select("svg #i"+imageBufferInUse).transition().duration(TRANSITION_DURATION).style("opacity",0);
-    d3.select("svg #i"+(imageBufferInUse*-1)).attr("xlink:href", cm.url).style("opacity",0);
-    d3.select("svg #i"+(imageBufferInUse*-1)).transition().duration(TRANSITION_DURATION).style("opacity",1);
+    d3.select("svg #i"+imageBufferInUse).transition().duration(DEFAULT_TRANSITION_DURATION).style("opacity",0);
+    d3.select("svg #i"+(imageBufferInUse*-1)).attr("xlink:href", curMap.url).style("opacity",0);
+    d3.select("svg #i"+(imageBufferInUse*-1)).transition().duration(DEFAULT_TRANSITION_DURATION).style("opacity",1);
     imageBufferInUse *= -1;
   }
 
   function mouseOverStatue(d, circleObject) {
-    circleObject.style.fill = "red";
+    circleObject.style.fill = "blue";
     d3.select("#infoDisplay").text("x: "+d.x+" y: "+d.y+" z: "+d.z+";  "+d.map+": "+d.name);
   }
 
@@ -32,8 +33,16 @@ window.onload = function() {
   }
 
   window.onresize = function() {
-    IMAGE_WIDTH = window.innerWidth * 0.79;
-    d3.selectAll("image").attr("width", IMAGE_WIDTH);
+    //reset components on a window resize
+    IMAGE_WIDTH  = window.innerWidth * 0.79;
+    IMAGE_HEIGHT = IMAGE_WIDTH * IMAGE_RATIO;
+    d3.selectAll("image").attr("width", IMAGE_WIDTH).attr("height", IMAGE_HEIGHT);
+    d3.select("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
+
+    cxScale = d3.scaleLinear().domain([curMap.minX,curMap.maxX]).range([0,IMAGE_WIDTH]);
+    cyScale = d3.scaleLinear().domain([curMap.minZ,curMap.maxZ]).range([0,IMAGE_HEIGHT]);
+    statue_scatter.transition().duration(0).attr("cx", function(d){return cxScale(d.x);})
+                                                             .attr("cy", function(d){return cyScale(d.z);});
   }
 
   let wholeSVG = d3.select("#generalMap").append("svg").attr("width",IMAGE_WIDTH).attr("height",IMAGE_HEIGHT);
@@ -121,5 +130,5 @@ window.onload = function() {
       .attr("value", function(d) {return d.index;})
       .text(function(d) {return d.text;})
 
-  ChangeToMap(0);
+  ChangeToMap(curMap);
 }
