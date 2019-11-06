@@ -39,11 +39,9 @@ statues = [
   //Ancient Cistern
   {x: -424, y:    0, z: 5026, map:        "Ancient Cistern", name:              "Entrance", bitwarp: false}, //Entrance(?)
   {x:  386, y: 7569, z: 1385, map:        "Ancient Cistern", name:             "Boss Door", bitwarp: false},
-  {x:-3990, y: 1000, z: 2850, map:        "Ancient Cistern", name:                     "?", bitwarp: false},
-  {x:-12300,y: 1481, z: 1370, map:        "Ancient Cistern", name:                     "?", bitwarp: false},
-  {x:-5263, y:-3410, z: 4381, map:        "Ancient Cistern", name:                     "?", bitwarp: false},
-  {x:-3459, y:-4218, z:  887, map:        "Ancient Cistern", name:                     "?", bitwarp: false},
-  {x:  444, y: 1000, z:-5435, map:        "Ancient Cistern", name:                     "?", bitwarp: false},
+  {x:-3990, y: 1000, z: 2850, map:        "Ancient Cistern", name:  "Thread from Basement", bitwarp: false},
+  {x:-5263, y:-3410, z: 4381, map:        "Ancient Cistern", name:       "Basement Tunnel", bitwarp: false},
+  {x:  444, y: 1000, z:-5435, map:        "Ancient Cistern", name:   "Lilypad Geyser Room", bitwarp: false},
   //Eldin Volcano
   {x:-9900, y: 1840, z: 2800, map:          "Eldin Volcano", name:              "Entrance", bitwarp: false},
   {x: 3470, y:  987, z: 6420, map:          "Eldin Volcano", name:          "Volcano East", bitwarp: false}, //
@@ -95,10 +93,10 @@ statues = [
   //Lanayru Gorge
   {x: -1200,y:   30, z:-2000, map:          "Lanayru Gorge", name:"              Entrance", bitwarp: false},
   //Lanayru Mining Facility
-  {x: -900, y:    0, z: 2200, map:"Lanayru Mining Facility", name:"              Entrance"},
-  {x:-3475, y: 1100, z:-20750,map:"Lanayru Mining Facility", name:"        Boss Door East"},
-  {x: -700, y:  600, z:-8860, map:"Lanayru Mining Facility", name:"         Main Hub Room"},
-  {x: 4125, y: 1100, z:-22800,map:"Lanayru Mining Facility", name:"        Boss Door West"},
+  {x: -900, y:    0, z: 2200, map:"Lanayru Mining Facility", name:"              Entrance", bitwarp: false},
+  {x:-3475, y: 1100, z:-20750,map:"Lanayru Mining Facility", name:"        Boss Door East", bitwarp: false},
+  {x: -700, y:  600, z:-8860, map:"Lanayru Mining Facility", name:"         Main Hub Room", bitwarp: false},
+  {x: 4125, y: 1100, z:-22800,map:"Lanayru Mining Facility", name:"        Boss Door West", bitwarp: false},
   //Sandship
   {x:-4993, y:    0, z:  811, map:               "Sandship", name:"            First Lock", bitwarp: false},
   {x:-2766, y:-1600, z: 1830, map:               "Sandship", name:"             Boss Door", bitwarp: false}, //Boss Door
@@ -108,5 +106,5 @@ statues = [
   {x: 1365, y: 7600, z:10420, map:         "Sealed Grounds", name:"         Sealed Temple", bitwarp:  true},
   {x:-8043, y: 8403, z:  153, map:         "Sealed Grounds", name:"                Spiral", bitwarp:  true},
   //Past Sealed Grounds
-  {x:    0, y:    0, z: 2320, map:    "Past Sealed Grounds", name:"                Demise", bitwarp:  true},
+  {x:    0, y:    0, z: 2320, map:    "Past Sealed Grounds", name:"                Demise", bitwarp: false},
 ]

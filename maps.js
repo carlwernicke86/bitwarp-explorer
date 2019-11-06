@@ -24,5 +24,9 @@ maps = [
   //Fire Sanctuary
   {name:"                  Fire Sanctuary", url:"  maps/D201.png",minX:-35150,maxX:32700,minZ:-27050,maxZ:11050, index: 6},
   //Lake Floria
-  {name:"                     Lake Floria", url:"  maps/F102.png",minX:-38800,maxX:38800,minZ:-14775,maxZ:28900, index: 7}
+  {name:"                     Lake Floria", url:"  maps/F102.png",minX:-38800,maxX:38800,minZ:-14775,maxZ:28900, index: 7},
+  //Ancient Cistern (main)
+  {name:"          Ancient Cistern (main)", url:"  maps/D101.png",minX:-28775,maxX:24750,minZ:-18000,maxZ:12000, index: 8},
+  //Ancient Cistern (basement)
+  {name:"      Ancient Cistern (basement)", url:"  maps/D101b.png",minX:-28775,maxX:24750,minZ:-18000,maxZ:12000, index: 8}
 ];

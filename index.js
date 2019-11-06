@@ -114,6 +114,16 @@ window.onload = function() {
       name: "Lake Floria",
       text: "Lake Floria",
       index: 7
+    },
+    {
+      name: "Ancient Cistern (main)",
+      text: "Ancient Cistern (main)",
+      index: 8
+    },
+    {
+      name: "Ancient Cistern (basement)",
+      text: "Ancient Cistern (Basement)",
+      index: 9
     }
   ];
 

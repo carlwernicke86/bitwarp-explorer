@@ -7,6 +7,7 @@ option, select{
   background-color: purple;
   height: 20px;
   border-color: gold;
+  width: 50%;
 }
 
 svg {
