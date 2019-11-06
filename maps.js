@@ -24,5 +24,5 @@ maps = [
   //Fire Sanctuary
   {name:"                  Fire Sanctuary", url:"  maps/D201.png",minX:-35150,maxX:32700,minZ:-27050,maxZ:11050, index: 6},
   //Lake Floria
-  {name:"                     Lake Floria", url:"  maps/F102.png",minX:-38800,maxX:38800,minZ:-14750,maxZ:29000, index: 7}
+  {name:"                     Lake Floria", url:"  maps/F102.png",minX:-38800,maxX:38800,minZ:-14775,maxZ:28900, index: 7}
 ];
