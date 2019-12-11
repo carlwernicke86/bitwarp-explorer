@@ -2,6 +2,11 @@ body {
   background-image: url("triforce-bg.jpg");
 }
 
+h1 {
+  color: #E8D39D;
+  text-align: center;
+}
+
 option, select{
   color: yellow;
   background-color: purple;
@@ -33,11 +38,28 @@ option, select, svg {
 #controls {
   width: 20%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 #infoDisplay {
   color: white;
   text-align: center;
   height: 200px;
+}
+
+#statue-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  color: #E8D39D;
+}
+
+#selector-div {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+label {
+  vertical-align: top;
 }

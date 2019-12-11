@@ -32,6 +32,14 @@ window.onload = function() {
     circleObject.style.fill="#f5ff5f";
   }
 
+  function AllStatuesClicked() {
+    statue_scatter.attr("visibility", "visible");
+  }
+
+  function BitWarpsOnlyClicked() {
+    statue_scatter.attr("visibility", d => {if (d.bitwarp) return "visible"; else return "hidden";});
+  }
+
   window.onresize = function() {
     //reset components on a window resize
     IMAGE_WIDTH  = window.innerWidth * 0.79;
@@ -154,6 +162,9 @@ window.onload = function() {
       .append("option")
       .attr("value", function(d) {return d.index;})
       .text(function(d) {return d.text;})
+
+  d3.select("#all-statues").on("click", AllStatuesClicked);
+  d3.select("#bitwarps-only").on("click", BitWarpsOnlyClicked);
 
   ChangeToMap(curMap);
 }

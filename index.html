@@ -10,12 +10,25 @@
     <link href="index.css" rel="stylesheet">
   </head>
   <body>
+    <h1>Skyward Sword Statue Coordinates</h1>
     <div id="container">
       <div id="generalMap">
       </div>
       <div id="controls">
+        <div id="statue-buttons">
+          <div id="button1">
+            <input type="radio" name="statue" value="all" id="all-statues" checked="checked" />
+            <label for="all-statues">All Statues</label>
+          </div>
+          <div id="button2">
+            <input type="radio" name="statue" value="bitwarp" id="bitwarps-only" />
+            <label for="bitwarps-only">BitWarps Only</label>
+          </div>
+        </div>
+        <div id="selector-div">
         <select id="selector">
         </select>
+        </div>
       </div>
     </div>
     <span id="infoDisplay">
